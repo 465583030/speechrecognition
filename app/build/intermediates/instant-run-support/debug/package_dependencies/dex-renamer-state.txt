@@ -1,4 +1,4 @@
-#Thu Nov 23 15:28:50 BRST 2017
-base.0=/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/transforms/dexMerger/debug/10
+#Fri Nov 24 10:19:18 BRST 2017
+base.0=/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/transforms/dexMerger/debug/29
 renamed.0=classes.dex
-file.0=/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/transforms/dexMerger/debug/10/classes.dex
+file.0=/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/transforms/dexMerger/debug/29/classes.dex

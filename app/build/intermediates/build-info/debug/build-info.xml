@@ -1,31 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="23"
-    build-mode="COLD"
-    density="xhdpi"
+    abi="x86"
+    api-level="27"
+    build-mode="FULL"
+    density="hdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.0"
-    timestamp="1511459545777"
+    timestamp="1511525401924"
     token="-3556563372362883260"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="53" />
+        duration="8207" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="4" />
+        duration="2718" />
     <task
         name="verifier"
-        duration="1" />
+        duration="1494" />
 
     <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
         location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/outputs/apk/debug/app-debug.apk"
@@ -33,61 +62,40 @@
 
     <build
         build-mode="FULL"
-        timestamp="1511458125957"
+        timestamp="1511525401924"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1511459429996"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1511459545777"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/home/spolti/AndroidStudioProjects/SpeechRecognition/app/build/outputs/apk/debug/app-debug.apk"
