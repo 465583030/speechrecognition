@@ -1,0 +1,10 @@
+Instalação Ferramentas:
+
+    - Android Studio
+
+- Tirar print dos códigos que fazem a parte do speech recognition
+- Pensar em um esquema de pontuação para implementação da análise da frase
+- TextToSpeech para informar mensagens adicionais.
+- Fazer diagrama de arquitetura
+
+
