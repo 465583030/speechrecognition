@@ -42,7 +42,6 @@ import java.util.Locale;
            // this.tvRepoList = (TextView) findViewById(R.id.tv_repo_list);  // Link our repository list text output box.
             //this.tvRepoList.setMovementMethod(new ScrollingMovementMethod());  // This makes our text box scrollable, for those big GitHub contributors with lots of repos :)
 
-            requestQueue = Volley.newRequestQueue(this);  // Th
 
             bt.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -63,7 +62,7 @@ import java.util.Locale;
 
 
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
-        public void falarMeuTexto(View view) {
+        public void textToSpeech(View view) {
             EditText et = (EditText) findViewById(R.id.editText);
             Log.i("Script", "Máximo: " + TextToSpeech.getMaxSpeechInputLength());
             tts.speak(et.getText().toString(), tts.QUEUE_FLUSH, null);
@@ -102,15 +101,15 @@ import java.util.Locale;
 
 
 
-//
-//        public void onPause(){
-//            if(tts != null){
-//                tts.stop();
-//                tts.shutdown();
-//            }
-//            super.onPause();
-//
-//        }
+
+        public void onPause(){
+            if(tts != null){
+                tts.stop();
+                tts.shutdown();
+            }
+            super.onPause();
+
+        }
 
 }
 

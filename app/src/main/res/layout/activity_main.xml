@@ -41,6 +41,7 @@
         android:elevation="@android:dimen/notification_large_icon_height"
         android:enabled="false"
         android:text="Escutar"
+        android:onClick="textToSpeech"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:visibility="visible" />
 
