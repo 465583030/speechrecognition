@@ -8,3 +8,4 @@ Instalação Ferramentas:
 - Fazer diagrama de arquitetura
 
 
+http://172.20.10.76:8080/api/devices?query=%7B%22_id%22%3A%22S172E2-AMG1302-DT15C-e4186b483fc0%22%7D&projection=InternetGatewayDevice

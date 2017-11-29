@@ -33,7 +33,9 @@ public class FetchData extends AsyncTask<Void, Void, Void> {
             String query = URLEncoder.encode(
                     "%7B%22_id%22%3A%22A42BB0-TD%252DVG5612-A42BB0E14DC0%22%7D&projection=InternetGatewayDevice.DeviceInfo.ModelName,InternetGatewayDevice.DeviceInfo.Manufacturer,InternetGatewayDevice.WANDevice.1.WANConnectionDevice.3.WANPPPConnection.1.DNSServers", "utf-8");
             url_2 = "http://172.20.10.76:8080/api/devices?query=" + query;
-            URL url = new URL(url_2);
+            String url1 = "http://172.20.10.76:8080/api/devices?query=%7B%22_id%22%3A%22A42BB0-TD%252DVG5612-A42BB0E14DC0%22%7D&projection=InternetGatewayDevice.DeviceInfo.ModelName,InternetGatewayDevice.DeviceInfo.Manufacturer,InternetGatewayDevice.WANDevice.1.WANConnectionDevice.3.WANPPPConnection.1.DNSServers";
+            URL url = new URL(url1);
+
 
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
@@ -77,7 +79,7 @@ public class FetchData extends AsyncTask<Void, Void, Void> {
         return null;
     }
 
-        @Override
+    @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
 

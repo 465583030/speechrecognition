@@ -67,7 +67,7 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/spolti/.gradle/caches/t
 	android:supportsRtl
 		ADDED from /home/spolti/AndroidStudioProjects/SpeechRecognition/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /home/spolti/AndroidStudioProjects/SpeechRecognition/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /home/spolti/AndroidStudioProjects/SpeechRecognition/app/src/main/AndroidManifest.xml:10:9-33
 	android:roundIcon
 		ADDED from /home/spolti/AndroidStudioProjects/SpeechRecognition/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon

@@ -15,8 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -24,10 +27,11 @@ import java.util.Locale;
         private TextToSpeech tts;
         private Button bt;
         public static TextView text;
+        private String id = "id=001D0F-DSL%2520Gateway-18A6F7315BA0" // ID TP-LINK supondo que a aplicação tem conhecimento da ID do usuário
 
         RequestQueue requestQueue;
-        String baseUrl = "http://172.20.10.76:8080/api/";  // This is the API base URL (GitHub API)
-        String url;  // This will hold the full URL which will include the username entered in the etGitHubUser.
+        String baseUrl = "http://172.20.10.76:8080/api/";
+        String url;
 
 
         @Override
@@ -35,39 +39,59 @@ import java.util.Locale;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            bt = (Button) findViewById(R.id.button_ouvir);
+           // bt = (Button) findViewById(R.id.button_ouvir);
             text = (TextView) findViewById(R.id.textView);
             tts = new TextToSpeech(this, this);
-
-           // this.tvRepoList = (TextView) findViewById(R.id.tv_repo_list);  // Link our repository list text output box.
-            //this.tvRepoList.setMovementMethod(new ScrollingMovementMethod());  // This makes our text box scrollable, for those big GitHub contributors with lots of repos :)
-
-
-            bt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    FetchData process = new FetchData();
-                    process.execute();
-                }
-            });
+//
+//            bt.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    FetchData process = new FetchData();
+//                    process.execute();
+//                }
+//            });
         }
 
         @Override
         public void onInit(int status) {
             if(status != TextToSpeech.ERROR) {
                 tts.setLanguage(Locale.getDefault());
-                bt.setEnabled(true);
+                //bt.setEnabled(true);
             }
         }
 
 
-        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
-        public void textToSpeech(View view) {
-            EditText et = (EditText) findViewById(R.id.editText);
-            Log.i("Script", "Máximo: " + TextToSpeech.getMaxSpeechInputLength());
-            tts.speak(et.getText().toString(), tts.QUEUE_FLUSH, null);
+        @Override
+        public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+
+            switch (requestCode) {
+                case 10:
+                    if (resultCode == RESULT_OK && data != null) {
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        //text.setText(result.get(0));
+                        //processSpeech(result.get(0));
+                        processSpeech("Qual o meu endereço MAC");
+                        processSpeech(result.get(0));
+
+                    }
+                    break;
+            }
+
+
         }
 
+        public void onPause(){
+            if(tts != null){
+                tts.stop();
+                tts.shutdown();
+            }
+            super.onPause();
+
+        }
+
+        ///////////////////// Speech Recognition //////////////////////////////////////
+        //Captura de Voz
         public void getSpeechInput(View view){
             Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -81,35 +105,33 @@ import java.util.Locale;
 
         }
 
-        @Override
-        public void onActivityResult(int requestCode, int resultCode, Intent data) {
-            super.onActivityResult(requestCode, resultCode, data);
 
-            switch (requestCode) {
-                case 10:
-                    if (resultCode == RESULT_OK && data != null) {
-                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                        text.setText(result.get(0));
+        //Texto para voz
+//        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
+//        public void textToSpeech(View view) {
+//            EditText et = (EditText) findViewById(R.id.editText);
+//            Log.i("Script", "Máximo: " + TextToSpeech.getMaxSpeechInputLength());
+//            tts.speak(et.getText().toString(), tts.QUEUE_FLUSH, null);
+//        }
+        //////////////////////////////////////////////////////////////////////////////
 
-                    }
-                    break;
+
+        ///////////////////// Speech Processing //////////////////////////////////////
+
+        public void processSpeech(String speech){
+            String palavras[] = new String[];
+            palavras = speech.split(" ");
+            List aux = Arrays.asList(palavras);
+            ArrayList words = new ArrayList(aux);
+
+            if(words.contains("mac")){
+
             }
-
 
         }
 
+        //////////////////////////////////////////////////////////////////////////////
 
-
-
-
-        public void onPause(){
-            if(tts != null){
-                tts.stop();
-                tts.shutdown();
-            }
-            super.onPause();
-
-        }
 
 }
 
